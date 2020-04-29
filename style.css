@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+/* define variables */
+:root{
+  --articleFont:'Pacifico', cursive;
+}
 html{
   margin-top: 0;
   margin-bottom: 20px;}
@@ -39,7 +43,7 @@ ul{
 color:white;
  /* vertical-align: middle; */
  padding-top:10px;
- font-family: 'Pacifico', cursive;
+ font-family: var(--articleFont);
  font-size: 1.5em;
 }
 
@@ -63,7 +67,7 @@ color:white;
 .block1>h3{
   padding-right: 300px;
   color: white;
-  font-family: 'Pacifico', cursive;
+  font-family: var(--articleFont);
   padding-top: 25px;
   text-align: right;
 /* margin: auto; */
@@ -87,23 +91,27 @@ color:white;
 .borderLine{
   clear: left;
   /* overflow: auto; */
-  height: 20px;
+  height: 2px;
   border-bottom: 2px solid black;
   /* margin-top: 50px; */
 }
 
 /* about.html */
 .aboutblock{
+  margin: auto;
   margin-top: 50px;
   margin-left: 100px;
+
   /* margin-bottom: 150px; */
 }
 .intro{
+  position: relative;
   width: 70%;
   float: left;
   /* line-height: */
   /* border: 1px solid red; */
   padding-right: 100px;
+  margin-bottom: 80px;
 }
 .framePhoto{
   width: 30%;
@@ -113,6 +121,10 @@ color:white;
 
 .intro>p{
   text-indent: 50px;
+  font-family: var(--articleFont);
+  font-size: 1.2em;
+  line-height: 2em;
+  /* font-weight: 0.6em; */
 }
 
 .photo>img{
@@ -141,6 +153,7 @@ color:white;
   background-color: black;
   color: white;
   text-align: center;
+  font-family: var(--articleFont);
   /* margin: auto; */
 }
 .lineright{
@@ -171,16 +184,26 @@ color:white;
   height: 1px;
   border-top: 2px solid black;
 }
+.aboutflo{
+  visibility: hidden;
+  position: absolute;
+  top: 60%;
+  right: 0%;
+}
+.aboutflo>img{
+  width: 200px;
+
+}
 
 /* Course.html */
 .course{
   float: left;
   margin-top: 50px;
-  margin-left: 150px;
+  margin-left: 150px;  
   text-shadow: 1px 1px 2px grey;
 }
 .course>p,.course>h3{
-  font-family: 'Pacifico', cursive;
+  font-family: var(--articleFont);
   float: left;
   text-shadow: 2px 2px 2px grey;
 }
@@ -192,6 +215,62 @@ color:white;
   float: right;
   margin-right: 200px;
 }
+/* Contact.html */
+.contactCon{
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.conleftline{
+  /* margin-top: 10px; */
+  /* text-align: right; */
+  height: 20px;
+  border-bottom: 2px solid black;
+  width: 40%;
+}
+.get{
+  text-shadow: 2px 2px 2px grey;
+  text-align: center;
+  font-family: var(--articleFont);
+  font-size: 2em;
+  width: 20%;
+  /* flex-grow: ; */
+}
+.conrightline{
+  height: 20px;
+  border-bottom: 2px solid black;
+  width: 40%;
+}
+.ef{
+  font-family: 'Montserrat Alternates', sans-serif;
+  padding-left: 100px;
+  width:100%;
+  font-size: 1.5em;
+}
+.leave{
+  font-family: 'Montserrat Alternates', sans-serif;
+  padding-top: 70px;
+  padding-left: 100px;
+  width: 40%;
+  font-size: 1.5em;
+}
+.conform{
+  width: 60%;
+  font-size: 1.5em;
+}
+.btn{
+  background-color: black;
+  color: white;
+
+}
+.formfont{
+  font-family: 'Montserrat Alternates', sans-serif;
+  }
+
 footer{
   /* color: black; */
   text-align: center;
@@ -200,13 +279,24 @@ footer{
 footer>a{
   color: black;
 }
+@media screen and (min-width:1240px){
+
+  .aboutflo{
+    visibility: visible;
+    position: absolute;
+    top: 60%;
+    right: 0%;
+  }
+}
 @media screen and (max-width:768px){
   .cardContainer{
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 @media screen and (max-width:500px){
   .cardContainer{
     grid-template-columns: repeat(1,1fr);
   }
+
 }
