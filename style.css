@@ -171,6 +171,27 @@ color:white;
   height: 1px;
   border-top: 2px solid black;
 }
+
+/* Course.html */
+.course{
+  float: left;
+  margin-top: 50px;
+  margin-left: 150px;
+  text-shadow: 1px 1px 2px grey;
+}
+.course>p,.course>h3{
+  font-family: 'Pacifico', cursive;
+  float: left;
+  text-shadow: 2px 2px 2px grey;
+}
+.listStyle{
+  clear: left;
+  list-style-type: square;
+}
+.courseImg>img{
+  float: right;
+  margin-right: 200px;
+}
 footer{
   /* color: black; */
   text-align: center;
